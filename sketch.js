@@ -62,7 +62,17 @@ squares.forEach(square => {console.log('ff')
     square.addEventListener('mouseover', function (e) { 
        // console.log(e)
         //console.log(this)
-       this.style.backgroundColor="blue"
+        // generating random values for colors
+        let col=new Array(3);
+        console.log(col.length);
+        for(i =0; i < col.length;i++){
+        col[i]=(Math.random()*255);
+        }
+        //for(c of col){col.push(Math.random()*255)}
+      //  col.forEach(col.push(Math.random()*255));
+        
+       this.style.backgroundColor=`rgb(${col[0]},${col[1]},${col[2]})`
+       console.log(`rgb(${col[0]},${col[1]},${col[2]})`);
     } );
  
 
