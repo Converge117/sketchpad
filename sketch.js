@@ -1,4 +1,4 @@
-function createGrid(nos){
+function createDivs(nos){
   let rows = nos;
   let coloumns = nos;
   let padWidth = 500;
@@ -38,7 +38,7 @@ button.textContent='click to enter';
 //button.style.color="blue";
 
 document.body.appendChild(button);
-button.addEventListener('click', buildSquares);
+button.addEventListener('click', beginSketch);
 
 /*function(){
   let num = prompt('Enter the no of squares per side', '');
@@ -46,14 +46,14 @@ button.addEventListener('click', buildSquares);
   createGrid(num);
 });*/
 
-function buildSquares(){
+function beginSketch(){
   let num = prompt('Enter the no of squares per side', '');
   console.log(num);
-  createGrid(num);
-  proSquare();// has to be called inside coz if callled before prompt is answered, will create an empty nodelist as only after prompt squares arre created.
+  createDivs(num);
+  colorSquare();// has to be called inside coz if callled before prompt is answered, will create an empty nodelist as only after prompt squares arre created.
 }
 
-function proSquare(){
+function colorSquare(){
 let squares = document.querySelectorAll('div.squares');
 console.log(squares)
 squares.forEach(square => {console.log('ff')
